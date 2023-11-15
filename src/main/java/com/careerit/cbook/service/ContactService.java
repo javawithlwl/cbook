@@ -12,5 +12,5 @@ public interface ContactService {
         ContactDTO updateContact(ContactDTO contactDTO);
         boolean deleteContact(UUID id);
         List<ContactDTO> search(String str);
-        ContactDTO getContact(String email);
+        ContactDTO getContact(String mobile);
 }

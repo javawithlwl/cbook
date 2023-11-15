@@ -27,9 +27,9 @@ public class ContactController {
         public ResponseEntity<List<ContactDTO>> getContacts(){
                 return ResponseEntity.ok(contactService.getContacts());
         }
-        @GetMapping("/get-by/{email}")
-        public ResponseEntity<ContactDTO> getContacts(@PathVariable("email")String email){
-                return ResponseEntity.ok(contactService.getContact(email));
+        @GetMapping("/get-by/{mobile}")
+        public ResponseEntity<ContactDTO> getContacts(@PathVariable("mobile")String mobile){
+                return ResponseEntity.ok(contactService.getContact(mobile));
         }
         @DeleteMapping("/{id}")
         public ResponseEntity<Boolean> deleteContact(@PathVariable("id") UUID id){
